@@ -1,9 +1,9 @@
 header {
     width: 100%;
-    padding: 28px 8%;
+    padding: 15px 8%;
     position: sticky;
     top: 0;
-    background-color: var(--color-primary-1);
+    background-color: var(--color-neutral-2);
     z-index: 3;
 }
 
@@ -12,10 +12,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-size: 0.9rem;
 }
 
 #nav_logo {
-    font-size: 24px;
+    font-size: 18px;
     color: var(--color-primary-6);
 }
 
@@ -27,12 +28,12 @@ header {
 
 .nav-item a {
     text-decoration: none;
-    color: #1d1d1dad;
+    color: var(--color-neutral-0);
     font-weight: 600;
 }
 
 .nav-item.active a {
-    color: var(--color-neutral-1);
+    color: var(--color-neutral-0);
     border-bottom: 3px solid var(--color-primary-4);
 }
 
@@ -56,12 +57,14 @@ header {
         background-color: transparent;
         font-size: 1.5rem;
         cursor: pointer;
+        color: var(--color-primary-4);
     }
 
     #mobile_menu.active {
         display: flex;
         flex-direction: column;
         align-items: center;
+        color: var(--color-primary-4);
     }
 
     #mobile_nav_list {
