@@ -37,6 +37,10 @@ section {
     padding: 28px 8%;
 }
 
+#icon_navbar {
+    height: 50px;
+}
+
 .btn-default {
     border: none;
     display: flex;
