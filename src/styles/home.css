@@ -72,13 +72,26 @@
     #banner,
     #banner img,
     #home .shape {
-        display: none;
+       opacity: 30%;
     }
+
+    #banner {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        z-index: 0;
+    }
+
+    #banner img {
+        width: auto;
+    }
+
 
     #cta {
         width: 100%;
         text-align: center;
         align-items: center;
+        z-index: 3;
     }
 }
 
