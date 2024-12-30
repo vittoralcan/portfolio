@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+form {
+    width: 100%;
+    max-width: 30rem;
+        font-size: 0.9rem;
+  }
+  
+  label,
+  textarea,
+  #send_button {
+    display: block;
+  }
+
+  input {
+    height: 40px;
+  }
+  
+  input,
+  textarea,
+  #send_button {
+    width: 100%;
+    font: inherit;
+    padding: 0.7rem;
+  }
+  
+  input,
+  textarea {
+    margin-bottom: 1rem;
+    color: white;
+    background: #323644;
+    border: 0.125rem solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  input:hover,
+  input:focus,
+  textarea:hover,
+  textarea:focus {
+    outline: none;
+    border-color: #1d90f5;
+  }
+  
+  label {
+    margin-bottom: 0.5rem;
+    color: #84868f;
+  }
+  
+  textarea {
+    min-height: 12.5rem;
+    resize: vertical;
+  }
+  
+  #send_button {
+    border: none;
+    color: #1d1d1d;
+    background: #0babc7;
+    transition: background-color .1s ease;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 4px solid #045563;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    padding: 8px 14px;
+  }
+  
+  #send_button:hover,
+  #send_button:focus {
+    background-color: var(--color-primary-7);
+    border-bottom: none;
+  }
+  
+  #send_button:disabled {
+    cursor: not-allowed;
+    background: #555b69;
+  }
+  
+  .success,
+  .error {
+    text-align: center;
+  }
+  
+  .success {
+    color: #0babc7;
+  }
+  
+  .error {
+    color: tomato;
+  }
+
+  #mobile_btn {
+    display: none;
+}
+
+#mobile_menu {
+    display: none;
+}
+
+@media screen and (max-width: 1170px) {
+    #nav_list,
+    #navbar .btn-default {
+        display: none;
+    }
+
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--color-primary-4);
+    }
+
+    #mobile_menu.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--color-primary-4);
+    }
+
+    #mobile_nav_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    #mobile_nav_list .nav-item {
+        list-style: none;
+        text-align: center;
+    } 
+}

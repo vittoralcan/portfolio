@@ -81,4 +81,8 @@
     .feedback {
         flex-direction: column;
     }
+
+    #testimonials {
+        height: 670px;
+    }
 } 

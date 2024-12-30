@@ -19,14 +19,9 @@
             </i>
 
             <ul id="nav_list">
-                <li class="nav-item">
-                    <a href="/index.html">Voltar</a>
-                </li>
             </ul>
 
-            <button class="btn-default">
-                Contato
-            </button>
+            <a href="/index.html" class="btn-default">Voltar</a>
 
             <button id="mobile_btn">
                 <i class="fa-solid fa-bars"></i>
@@ -34,19 +29,8 @@
         </nav>
 
         <div id="mobile_menu">
-            <ul id="mobile_nav_list">
-                <li class="nav-item">
-                    <a href="#home">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#menu">Últimos projetos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials">Sobre mim</a>
-                </li>
-            </ul>
 
-            <a href="contact.html" class="btn-default">Contato</a>
+            <a href="/index.html" class="btn-default">Voltar</a>
         </div>
     </header>
     </header>
@@ -55,8 +39,27 @@
         <section id="home"><!--SEÇÃO DO BANNER PRIMÁRIO DA PÁGINA-->
             <div class="shape"></div>
                 <div id="cta">
-                    22
+                    <p class="description">
+                        Envie uma mensagem abaixo e me conte como você quer desenvolver seu site! Pode entrar em contato comigo por outros canais abaixo também.
+                    </p>
+                    <form
+                    action="https://formsubmit.co/ajax/joaovitoredt@hotmail.com"
+                    method="POST"
+                    data-form
+                    >
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" required />
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" required />
+                        <label for="mensagem">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" required></textarea>
+                        <button id="send_button" type="submit" data-button>Enviar</button>
+                    </form>
                 </div>
+            </div>
+
+            <div id="banner">
+                <img src="src/Images/portfolio_banner_1.png" alt="">
             </div>
         </section>
 
@@ -69,15 +72,15 @@
             </span>
 
             <div class="social-media-buttons">
-                <a href="">
+                <a href="https://github.com/vittoralcan" target="_blank">
                     <i class="fa-brands fa-github"></i>
                 </a>
 
-                <a href="">
+                <a href="https://www.instagram.com/vittoralcan.01/profilecard/?igsh=bXpxbzJ1amg2MXI=" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
 
-                <a href="">
+                <a href="https://www.linkedin.com/in/jo%C3%A3o-v%C3%ADtor-oliveira-de-alcantara-a53695339?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
