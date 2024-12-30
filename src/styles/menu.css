@@ -7,20 +7,14 @@
     gap: 20px;
 }
 
-#menu {
-    background-image: url(/src/Images/background_1.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 #dishes {
     width: 100%;
     display: flex;
     justify-content: center;
     gap: 24px;
     margin-top: 32px;
+    margin-bottom: 50px;
+    z-index: 3;
 }
 
 .projects-title {
@@ -32,6 +26,7 @@
     background-color: var(--color-neutral-1);
     color: var(--color-neutral-0);
     font-size: 1.563rem;
+    z-index: 3;
 }
 
 .projects-title span {

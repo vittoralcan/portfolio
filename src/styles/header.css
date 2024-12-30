@@ -4,7 +4,7 @@ header {
     position: sticky;
     top: 0;
     background-color: var(--color-neutral-2);
-    z-index: 3;
+    z-index: 4;
 }
 
 #navbar {
@@ -13,6 +13,7 @@ header {
     align-items: center;
     justify-content: space-between;
     font-size: 0.9rem;
+    height: 50px;
 }
 
 #nav_logo {
