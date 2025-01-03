@@ -67,6 +67,27 @@ section {
     border-bottom: none;
 }
 
+.btn-default-code {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-2);
+    padding: 8px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .1s ease;
+    font-size: 0.9rem;
+    border-bottom: 5px solid #585858;
+    text-decoration: none;
+    color: #121212;
+}
+
+.btn-default-code:hover {
+    border-bottom: none;
+}
+
 .social-media-buttons {
     display: flex;
     gap: 18px;
@@ -246,6 +267,14 @@ section {
 
     #projects .section-subtitle {
         text-align: center;
+    }
+
+    .dish-price {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 90%;
+        justify-content: space-between;
     }
 
 } 
