@@ -38,6 +38,13 @@
     background-color: var(--color-neutral-1);
     padding: 12px;
     font-size: 0.9rem;
+    border: 0.125rem solid transparent;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.feedback:hover {
+    border: solid 0.125rem var(--color-primary-4);
+    outline: none;
 }
 
 .feedback-avatar {
