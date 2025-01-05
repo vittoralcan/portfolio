@@ -10,7 +10,7 @@
 #dishes {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     gap: 24px;
     margin-top: 32px;
     margin-bottom: 10px;
@@ -37,6 +37,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
     width: 25%;
     padding: 15px;
@@ -51,6 +52,7 @@
 .dish:hover {
     border: solid 0.125rem var(--color-primary-4);
     outline: none;
+    transition: 1s;
 }
 
 .dish-image {
