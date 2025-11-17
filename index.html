@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional - Seu Nome</title>
+    <!-- Carrega Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração do Tailwind para cor de destaque -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-green': '#00ff7d',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Estilos básicos para o tema escuro */
+        body {
+            background-color: #0d1117; /* Fundo muito escuro */
+            color: #e6e6e6; /* Texto claro */
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Estilo para a barra de navegação fixa (destaque) */
+        #navbar {
+            background-color: rgba(13, 17, 23, 0.95); /* Fundo semi-transparente */
+            backdrop-filter: blur(8px);
+        }
+
+        /* Estilo para links de navegação */
+        .nav-link {
+            transition: color 0.3s, border-color 0.3s;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: #00ff7d;
+        }
+
+        /* Estilo para botões de destaque (preenchido) */
+        .btn-primary {
+            background-color: #00ff7d;
+            color: #0d1117;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #00e66f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 255, 125, 0.4);
+        }
+
+        /* Estilo para o brilho (glow) no hover e foco do input */
+        .input-focus:hover {
+            border-color: #00ff7d;
+            /* Brilho sutil no hover */
+            box-shadow: 0 0 8px rgba(0, 255, 125, 0.5); 
+        }
+        
+        .input-focus:focus {
+            outline: none;
+            border-color: #00ff7d;
+            /* Brilho mais forte no focus (melhor para acessibilidade) */
+            box-shadow: 0 0 15px rgba(0, 255, 125, 0.8), 0 0 5px rgba(0, 255, 125, 0.4);
+        }
+        
+        /* Estilo do separador com cor de destaque */
+        .separator {
+            width: 100px;
+            height: 4px;
+            background-color: #00ff7d;
+            border-radius: 2px;
+            margin: 0.5rem auto 2rem;
+        }
+    </style>
+</head>
+<body class="selection:bg-accent-green selection:text-gray-900">
+
+    <!-- BARRA DE NAVEGAÇÃO FIXA -->
+    <header id="navbar" class="sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo/Nome -->
+                <div class="flex-shrink-0">
+                    <a href="#inicio" class="text-2xl font-bold text-accent-green">
+                        <span class="text-white">Meu</span>Portfólio
+                    </a>
+                </div>
+
+                <!-- Links de Navegação (Desktop) -->
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#inicio" class="nav-link text-white hover:text-accent-green">Início</a>
+                        <a href="#projetos" class="nav-link text-white hover:text-accent-green">Projetos</a>
+                        <a href="#contato" class="nav-link text-white hover:text-accent-green">Contato</a>
+                    </div>
+                </nav>
+
+                <!-- Botão do Menu Mobile -->
+                <button id="mobile-menu-button" type="button" class="md:hidden p-2 rounded-md text-white hover:text-accent-green focus:outline-none focus:ring-2 focus:ring-accent-green" aria-controls="mobile-menu" aria-expanded="false">
+                    <!-- Icone de Menu (Hambúrguer) -->
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <!-- Icone de Fechar (X) - Escondido por padrão -->
+                    <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-accent-green">Início</a>
+                <a href="#projetos" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-accent-green">Projetos</a>
+                <a href="#contato" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-accent-green">Contato</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- SEÇÃO 1: BEM-VINDO / INÍCIO -->
+        <section id="inicio" class="min-h-screen flex items-center justify-center pt-20 pb-12 text-center">
+            <div class="max-w-4xl px-4">
+                <p class="text-xl sm:text-2xl font-medium text-accent-green mb-4 animate-fadeInUp">OLÁ, EU SOU SEU NOME!</p>
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl font-extrabold leading-tight mb-6">
+                    Desenvolvedor Web <br class="hidden sm:block"> <span class="text-accent-green">Criativo & Inovador</span>.
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                    Transformo ideias complexas em soluções digitais elegantes e eficientes. Vamos construir algo incrível juntos?
+                </p>
+                <a href="#projetos" class="btn-primary inline-block text-lg">
+                    Ver Projetos
+                </a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 2: PROJETOS -->
+        <section id="projetos" class="py-20 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white">Meus Projetos Recentes</h2>
+                <div class="separator"></div>
+                <p class="text-gray-400 text-lg mb-12">Uma seleção de trabalhos que demonstram minhas habilidades em diversas tecnologias.</p>
+
+                <!-- Grid de Projetos -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <!-- Cartão de Projeto 1 -->
+                    <div class="bg-gray-900 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300 border border-gray-700 hover:border-accent-green/50">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-accent-green mb-3">Aplicação de Tarefas</h3>
+                            <p class="text-gray-400 mb-4">Um aplicativo moderno e responsivo para gerenciamento de listas de tarefas diárias.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                                <span class="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">React</span>
+                                <span class="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Tailwind CSS</span>
+                            </div>
+                            <a href="#" class="text-accent-green font-medium hover:underline">Ver Detalhes &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Cartão de Projeto 2 -->
+                    <div class="bg-gray-900 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300 border border-gray-700 hover:border-accent-green/50">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-accent-green mb-3">E-commerce de Livros</h3>
+                            <p class="text-gray-400 mb-4">Plataforma de comércio eletrônico completa com carrinho e sistema de pagamento simulado.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                                <span class="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Angular</span>
+                                <span class="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Firebase</span>
+                            </div>
+                            <a href="#" class="text-accent-green font-medium hover:underline">Ver Detalhes &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Cartão de Projeto 3 -->
+                    <div class="bg-gray-900 rounded-xl shadow-2xl overflow-hidden transform hover:scale-[1.02] transition duration-300 border border-gray-700 hover:border-accent-green/50">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-accent-green mb-3">Blog de Viagens com CMS</h3>
+                            <p class="text-gray-400 mb-4">Um blog dinâmico com sistema de gerenciamento de conteúdo para publicações rápidas.</p>
+                            <div class="flex flex-wrap justify-center gap-2 mb-4">
+                                <span class="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">Python (Flask)</span>
+                                <span class="bg-gray-700 text-sm px-3 py-1 rounded-full text-white">SQLite</span>
+                            </div>
+                            <a href="#" class="text-accent-green font-medium hover:underline">Ver Detalhes &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12">
+                    <a href="#" class="btn-primary inline-block text-lg">
+                        Ver Mais no GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: CONTATO -->
+        <section id="contato" class="py-20">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white">Entre em Contato</h2>
+                <div class="separator"></div>
+                <p class="text-gray-400 text-lg mb-12">Estou sempre aberto a novas oportunidades e projetos. Envie-me uma mensagem!</p>
+
+                <!-- Formulário de Contato -->
+                <form action="#" method="POST" class="bg-gray-800 p-8 rounded-xl shadow-2xl border border-gray-700">
+                    <div class="space-y-6">
+                        <!-- Campo Nome -->
+                        <div>
+                            <label for="name" class="block text-left text-sm font-medium text-white mb-2">Nome</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 bg-gray-900 text-white rounded-lg border border-gray-700 input-focus transition duration-200"
+                                placeholder="Seu nome completo">
+                        </div>
+                        <!-- Campo Email -->
+                        <div>
+                            <label for="email" class="block text-left text-sm font-medium text-white mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 bg-gray-900 text-white rounded-lg border border-gray-700 input-focus transition duration-200"
+                                placeholder="seu.email@exemplo.com">
+                        </div>
+                        <!-- Campo Mensagem -->
+                        <div>
+                            <label for="message" class="block text-left text-sm font-medium text-white mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 bg-gray-900 text-white rounded-lg border border-gray-700 input-focus transition duration-200"
+                                placeholder="Detalhe seu projeto ou pergunta..."></textarea>
+                        </div>
+                        <!-- Botão de Envio -->
+                        <div>
+                            <button type="submit" class="btn-primary w-full mt-4 text-xl">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Nota sobre o formulário -->
+                    <p class="text-xs text-gray-500 mt-6 text-center">
+                        * Este formulário requer um script de backend (como o Python gerado) para funcionar.
+                    </p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 border-t border-gray-700 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2 text-accent-green">
+                Desenvolvido com <span class="text-red-500">&hearts;</span> e Tailwind CSS.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para o Menu Mobile e Scroll Suave -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+
+            // 1. Alternar Menu Mobile
+            mobileMenuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true' || false;
+                mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+
+                // Alternar ícones de hambúrguer/fechar
+                mobileMenuButton.querySelector('svg:first-child').classList.toggle('hidden');
+                mobileMenuButton.querySelector('svg:last-child').classList.toggle('hidden');
+            });
+
+            // 2. Fechar Menu Mobile ao clicar em um link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false');
+                        // Mostrar hambúrguer, esconder X
+                        mobileMenuButton.querySelector('svg:first-child').classList.remove('hidden');
+                        mobileMenuButton.querySelector('svg:last-child').classList.add('hidden');
+                    }
+                });
+            });
+
+            // 3. Scroll Suave
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
