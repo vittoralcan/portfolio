@@ -96,22 +96,15 @@
         }
 
         .background-video {
-        /* Posição absoluta em relação ao .hero-section */
+            
         position: absolute; 
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         
-        /* 'object-fit: cover;' é essencial!
-        Faz o vídeo preencher todo o contêiner, cortando o que for necessário, 
-        garantindo que não haja barras pretas.
-        */
         object-fit: cover; 
         
-        /* Z-index negativo: Coloca o vídeo BEM no fundo.
-        O 'z-index: 1' da seção pai garante que o conteúdo fique visível.
-        */
         z-index: -1; 
 }
 
